@@ -15,8 +15,8 @@ namespace WotrModDragonSubdomain.DragonBreath.Fire
 
             var fireDragonBreathFeature = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
-                .SetDisplayName("DragonSubdomain.DomainProgressionFeature.Name")
-                .SetDescription("DragonSubdomain.DomainProgressionFeature.Description")
+                .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
+                .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")
                 .SetIcon(dragonBreathAbility.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .AddFacts([FireDragonBreathAbility.AbilityName]) // Put breath weapon ability here
                 .AddAbilityResources(resource: FireDragonBreathResource.ResourceName, restoreAmount: true)

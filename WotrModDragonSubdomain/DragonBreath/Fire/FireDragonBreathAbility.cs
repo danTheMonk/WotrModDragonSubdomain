@@ -35,8 +35,8 @@ namespace WotrModDragonSubdomain.DragonBreath.Fire
 
             var fireDragonBreathAbility = AbilityConfigurator
                 .New(AbilityName, AbilityGuid) // Unique GUID
-                .SetDisplayName("DragonSubdomain.DomainProgressionFeature.Name")
-                .SetDescription("DragonSubdomain.DomainProgressionFeature.Description")
+                .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
+                .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")
                 .SetIcon(dragonBreathAbility.Get().m_Icon) // Use the same icon as the dragon breath ability
                 .SetLocalizedSavingThrow(SavingThrow.ReflexHalf)
                 .SetRange(AbilityRange.Projectile)

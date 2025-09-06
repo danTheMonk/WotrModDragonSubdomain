@@ -15,8 +15,8 @@ namespace WotrModDragonSubdomain
         {
             var dragonSubdomainBreathWeaponFeatureSelection = FeatureSelectionConfigurator
                 .New(FeatureSelectionName, FeatureSelectionGuid)
-                .SetDisplayName("DragonSubdomain.BreathWeaponSelection.Name")
-                .SetDescription("DragonSubdomain.BreathWeaponSelection.Description")
+                .SetDisplayName("DragonSubdomain.BreathWeapon.FeatureSelection.Name")
+                .SetDescription("DragonSubdomain.BreathWeapon.FeatureSelection.Description")
                 .SetIcon(Constants.dragonBreathFeatureReference.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .SetAllFeatures([
                     AcidDragonBreathFeature.FeatureName,

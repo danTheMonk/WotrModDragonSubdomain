@@ -24,8 +24,8 @@ namespace WotrModDragonSubdomain
             // Create a new progression for the Dragon subdomain
             var dragonSubdomainProgression = ProgressionConfigurator
                 .New(ProgressionName, ProgressionGuid)
-                .SetDisplayName("DragonSubdomainProgression.Name")
-                .SetDescription("DragonSubdomainProgression.Description")
+                .SetDisplayName("DragonSubdomain.Progression.Name")
+                .SetDescription("DragonSubdomain.Progression.Description")
                 .AddPrerequisiteFeature(
                     feature: FeatureRefs.ScalykindDomainAllowed.ToString(),
                     isFeatureSelectionWhiteList: false,
@@ -89,22 +89,22 @@ namespace WotrModDragonSubdomain
             var addDragonSubdomainToDomainsFeatureSelection = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.DomainsSelection)
                 .AddToAllFeatures(dragonSubdomainProgression)
-                .SetDisplayName("DragonSubdomainProgression.Name")
-                .SetDescription("DragonSubdomainProgression.Description")
+                .SetDisplayName("DragonSubdomain.Progression.Name")
+                .SetDescription("DragonSubdomain.Progression.Description")
                 .Configure();
 
             var addDragonSubdomainToDivineHunterDomainsFeatureSelection = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.DivineHunterDomainsSelection)
                 .AddToAllFeatures(dragonSubdomainProgression)
-                .SetDisplayName("DragonSubdomainProgression.Name")
-                .SetDescription("DragonSubdomainProgression.Description")
+                .SetDisplayName("DragonSubdomain.Progression.Name")
+                .SetDescription("DragonSubdomain.Progression.Description")
                 .Configure();
 
             var addDragonSubdomainToSecondDomainsSeparatistFeatureSelection = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.SecondDomainsSeparatistSelection)
                 .AddToAllFeatures(dragonSubdomainProgression)
-                .SetDisplayName("DragonSubdomainProgression.Name")
-                .SetDescription("DragonSubdomainProgression.Description")
+                .SetDisplayName("DragonSubdomain.Progression.Name")
+                .SetDescription("DragonSubdomain.Progression.Description")
                 .Configure();
 
             //var dragonSubdomainAllowed = FeatureConfigurator

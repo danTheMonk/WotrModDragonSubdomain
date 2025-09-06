@@ -13,7 +13,6 @@ namespace WotrModDragonSubdomain
             var dragonSubdomainBaseFeature = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
                 .CopyFrom(FeatureRefs.ScalykindDomainBaseFeature.Reference)
-                // .RemoveComponents(c => c is AddFeatureOnClassLevel) // May need to make this more exact if it ends up removing the line below too
                 .AddFeatureOnClassLevel(
                     clazz: CharacterClassRefs.ClericClass.ToString(),
                     level: 1,
