@@ -1,6 +1,5 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
-using Kingmaker.Designers.Mechanics.Facts;
 
 namespace WotrModDragonSubdomain
 {

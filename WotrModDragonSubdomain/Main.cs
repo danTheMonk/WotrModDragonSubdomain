@@ -3,7 +3,6 @@ using System.Reflection;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using UnityModManagerNet;
-using WotrModDragonSubdomain.DragonBreath;
 using WotrModDragonSubdomain.DragonBreath.Acid;
 using WotrModDragonSubdomain.DragonBreath.Cold;
 using WotrModDragonSubdomain.DragonBreath.Electricity;
