@@ -1,7 +1,6 @@
 [
   {
     "Key": "DragonSubdomain.Name",
-    "ProcessTemplates": false,
     "enGB": "Dragon Subdomain"
   },
   {
@@ -15,5 +14,13 @@
   {
     "Key": "DragonSubdomain.DomainProgressionFeature.Description",
     "enGB": "At 4th level, you may use a breath weapon once per day as a standard action. When you gain this ability, choose acid, cold, fire, or electricity—this determines what kind of damage your breath weapon deals. Once you make this choice, you cannot change it later. Your breath weapon fills a 15-foot cone, and deals 3d6 points of damage—this damage increases by 1d6 points at every even-numbered level you gain beyond 4th level. A creature hit by your dragonbreath attack can attempt a Reflex save (DC 10 + 1/2 your cleric level + your Wisdom modifier) to take half damage. At 9th level, you can use this ability two times per day, and at 14th level you can use it three times per day."
+  },
+  {
+    "Key": "DragonSubdomainProgression.Name",
+    "enGB": "Dragon Subdomain"
+  },
+  {
+    "Key": "DragonSubdomainProgression.Description",
+    "enGB": "You have innate connection to dragons and their kin.\nVenomous Stare: As a {g|Encyclopedia:Standard_Actions}standard action{/g}, you can activate a gaze attack against enemies within a 30-foot radius. These enemies must make a {g|Encyclopedia:Saving_Throw}Will save{/g} ({g|Encyclopedia:DC}DC{/g} = 10 + 1/2 your cleric level + your {g|Encyclopedia:Wisdom}Wisdom{/g} modifier). Those who fail take {g|Encyclopedia:Dice}1d6{/g} points of {g|Encyclopedia:Damage}damage{/g} + 1 point for every two cleric levels you possess and are fascinated for one {g|Encyclopedia:Combat_Round}round{/g}. You can use this ability a number of times per day equal to 3 + your Wisdom modifier. This is a mind-affecting effect. \nDragonbreath: At 4th level, you may use a breath weapon once per day as a {g|Encyclopedia:Standard_Actions}standard action{/g}. When you gain this ability, choose acid, cold, fire, or electricity—this determines what kind of damage your breath weapon deals. Once you make this choice, you cannot change it later. Your breath weapon fills a 15-foot cone, and deals {g|Encyclopedia:Dice}3d6{/g} points of {g|Encyclopedia:Damage}damage{/g}—this damage increases by {g|Encyclopedia:Dice}1d6{/g} points at every even-numbered level you gain beyond 4th level. A creature hit by your dragonbreath attack can attempt a {g|Encyclopedia:Saving_Throw}Reflex save{/g} ({g|Encyclopedia:DC}DC{/g} 10 + 1/2 your cleric level + your Wisdom modifier) to take half damage. At 9th level, you can use this ability two times per day, and at 14th level you can use it three times per day.\nDomain {g|Encyclopedia:Spell}Spells{/g}: {g|SpellsMagicFang}magic fang{/g}, {g|SpellsHoldAnimal}hold animal{/g}, {g|SpellsProtectionFromEnergy}protection from energy{/g}, {g|SpellsDragon'sBreath}dragon's breath{/g}, {g|SpellsAnimalGrowth}animal growth{/g}, {g|SpellsDragonKindI}dragonkind I{/g}, {g|SpellsCreepingDoom}creeping doom{/g}, {g|SpellsAnimalShapes}animal shapes{/g}, {g|SpellsShapechange}shapechange{/g}."
   }
 ]

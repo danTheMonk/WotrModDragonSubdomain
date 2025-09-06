@@ -3,6 +3,11 @@ using System.Reflection;
 using HarmonyLib;
 using Kingmaker.Blueprints.JsonSystem;
 using UnityModManagerNet;
+using WotrModDragonSubdomain.DragonBreath;
+using WotrModDragonSubdomain.DragonBreath.Acid;
+using WotrModDragonSubdomain.DragonBreath.Cold;
+using WotrModDragonSubdomain.DragonBreath.Electricity;
+using WotrModDragonSubdomain.DragonBreath.Fire;
 
 namespace WotrModDragonSubdomain
 {
@@ -32,7 +37,8 @@ namespace WotrModDragonSubdomain
         }
 
 #if DEBUG
-        public static bool OnUnload(UnityModManager.ModEntry modEntry) {
+        public static bool OnUnload(UnityModManager.ModEntry modEntry)
+        {
             HarmonyInstance.UnpatchAll(modEntry.Info.Id);
             return true;
         }
@@ -57,9 +63,47 @@ namespace WotrModDragonSubdomain
 
                     log.Log("Patching blueprints.");
                     // Insert your mod's patching methods here
+                    DragonSubdomainSpellList.Configure();
+
+                    log.Log("Configured Spell List");
+
+                    AcidDragonBreathResource.Configure();
+                    ColdDragonBreathResource.Configure();
+                    ElectricityDragonBreathResource.Configure();
+                    FireDragonBreathResource.Configure();
+
+                    log.Log("Configured Breath Resources");
+
+                    AcidDragonBreathAbility.Configure();
+                    ColdDragonBreathAbility.Configure();
+                    ElectricityDragonBreathAbility.Configure();
+                    FireDragonBreathAbility.Configure();
+
+                    log.Log("Configured Breath Abilities");
+
+                    AcidDragonBreathFeature.Configure();
+                    ColdDragonBreathFeature.Configure();
+
+                    log.Log("Configured Cold and Acid Features");
+
+                    ElectricityDragonBreathFeature.Configure();
+
+                    log.Log("Configured Electricity Feature");
+
+                    FireDragonBreathFeature.Configure();
+
+                    log.Log("Configured Breath Features");
+
+                    DragonSubdomainBreathWeaponFeatureSelection.Configure();
+
+                    DragonSubdomainSpellListFeature.Configure();
+
+                    DragonSubdomainBaseFeature.Configure();
+
+                    log.Log("Configured Base and Selection Features");
+
                     DragonSubdomain.Configure();
-                    // Example
-                    // SuperAwesomeFeat.Configure()
+                    // DragonSubdomainProgressionSecondary.Configure();
                 }
                 catch (Exception e)
                 {
