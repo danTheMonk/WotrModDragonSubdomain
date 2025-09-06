@@ -1,7 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
 using Kingmaker.EntitySystem.Stats;
-using WotrModDragonSubdomain.DragonBreath.Electricity;
 
 namespace WotrModDragonSubdomain.DragonBreath.Acid
 {
