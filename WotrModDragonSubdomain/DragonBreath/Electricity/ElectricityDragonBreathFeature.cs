@@ -1,5 +1,6 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
+using Kingmaker.EntitySystem.Stats;
 
 namespace WotrModDragonSubdomain.DragonBreath.Electricity
 {
@@ -19,6 +20,7 @@ namespace WotrModDragonSubdomain.DragonBreath.Electricity
                 .SetIcon(dragonBreathAbility.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .AddFacts([ElectricityDragonBreathAbility.AbilityName]) // Put breath weapon ability here
                 .AddAbilityResources(resource: ElectricityDragonBreathResource.ResourceName, restoreAmount: true)
+                .AddReplaceAbilitiesStat(ability: [ElectricityDragonBreathAbility.AbilityName], stat: StatType.Wisdom) // Replace with Wisdom for DC calculation
                 .Configure();
         }
     }

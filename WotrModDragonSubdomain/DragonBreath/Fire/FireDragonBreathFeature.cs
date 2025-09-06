@@ -1,5 +1,7 @@
 ﻿using BlueprintCore.Blueprints.CustomConfigurators.Classes;
 using BlueprintCore.Blueprints.References;
+using Kingmaker.EntitySystem.Stats;
+using WotrModDragonSubdomain.DragonBreath.Electricity;
 
 namespace WotrModDragonSubdomain.DragonBreath.Fire
 {
@@ -10,7 +12,7 @@ namespace WotrModDragonSubdomain.DragonBreath.Fire
 
         public static void Configure()
         {
-            var dragonBreathAbility = AbilityRefs.FormOfTheDragonISilverBreathWeaponAbility.Reference; // Reference to dragon breath ability, adjust as needed
+            var dragonBreathAbility = AbilityRefs.FormOfTheDragonIGoldBreathWeaponAbility.Reference; // Reference to dragon breath ability, adjust as needed
 
             var fireDragonBreathFeature = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
@@ -19,6 +21,7 @@ namespace WotrModDragonSubdomain.DragonBreath.Fire
                 .SetIcon(dragonBreathAbility.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .AddFacts([FireDragonBreathAbility.AbilityName]) // Put breath weapon ability here
                 .AddAbilityResources(resource: FireDragonBreathResource.ResourceName, restoreAmount: true)
+                .AddReplaceAbilitiesStat(ability: [FireDragonBreathAbility.AbilityName], stat: StatType.Wisdom) // Replace with Wisdom for DC calculation
                 .Configure();
         }
     }
