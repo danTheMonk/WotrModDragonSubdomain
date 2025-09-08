@@ -7,6 +7,11 @@ using WotrModDragonSubdomain.DragonBreath.Acid;
 using WotrModDragonSubdomain.DragonBreath.Cold;
 using WotrModDragonSubdomain.DragonBreath.Electricity;
 using WotrModDragonSubdomain.DragonBreath.Fire;
+using WotrModDragonSubdomain.Separatist;
+using WotrModDragonSubdomain.Separatist.DragonBreath.Acid;
+using WotrModDragonSubdomain.Separatist.DragonBreath.Cold;
+using WotrModDragonSubdomain.Separatist.DragonBreath.Electricity;
+using WotrModDragonSubdomain.Separatist.DragonBreath.Fire;
 
 namespace WotrModDragonSubdomain
 {
@@ -59,9 +64,9 @@ namespace WotrModDragonSubdomain
                         return;
                     }
                     Initialized = true;
-
+                    
                     log.Log("Patching blueprints.");
-                    // Insert your mod's patching methods here
+                    
                     DragonSubdomainSpellList.Configure();
 
                     log.Log("Configured Spell List");
@@ -71,6 +76,11 @@ namespace WotrModDragonSubdomain
                     ElectricityDragonBreathResource.Configure();
                     FireDragonBreathResource.Configure();
 
+                    AcidDragonBreathResourceSeparatist.Configure();
+                    ColdDragonBreathResourceSeparatist.Configure();
+                    ElectricityDragonBreathResourceSeparatist.Configure();
+                    FireDragonBreathResourceSeparatist.Configure();
+
                     log.Log("Configured Breath Resources");
 
                     AcidDragonBreathAbility.Configure();
@@ -78,31 +88,44 @@ namespace WotrModDragonSubdomain
                     ElectricityDragonBreathAbility.Configure();
                     FireDragonBreathAbility.Configure();
 
+                    AcidDragonBreathAbilitySeparatist.Configure();
+                    ColdDragonBreathAbilitySeparatist.Configure();
+                    ElectricityDragonBreathAbilitySeparatist.Configure();
+                    FireDragonBreathAbilitySeparatist.Configure();
+
                     log.Log("Configured Breath Abilities");
 
                     AcidDragonBreathFeature.Configure();
                     ColdDragonBreathFeature.Configure();
-
-                    log.Log("Configured Cold and Acid Features");
-
                     ElectricityDragonBreathFeature.Configure();
-
-                    log.Log("Configured Electricity Feature");
-
                     FireDragonBreathFeature.Configure();
+
+                    AcidDragonBreathFeatureSeparatist.Configure();
+                    ColdDragonBreathFeatureSeparatist.Configure();
+                    ElectricityDragonBreathFeatureSeparatist.Configure();
+                    FireDragonBreathFeatureSeparatist.Configure();
 
                     log.Log("Configured Breath Features");
 
                     DragonSubdomainBreathWeaponFeatureSelection.Configure();
 
+                    DragonSubdomainBreathWeaponFeatureSelectionSeparatist.Configure();
+
+                    log.Log("Configured Breath Weapon Feature Selections");
+
                     DragonSubdomainSpellListFeature.Configure();
+
+                    log.Log("Configured Spell List Features");
 
                     DragonSubdomainBaseFeature.Configure();
 
-                    log.Log("Configured Base and Selection Features");
+                    DragonSubdomainBaseFeatureSeparatist.Configure();
+
+                    log.Log("Configured Base Features");
 
                     DragonSubdomain.Configure();
-                    // DragonSubdomainProgressionSecondary.Configure();
+
+                    DragonSubdomainProgressionSeparatist.Configure();
                 }
                 catch (Exception e)
                 {
