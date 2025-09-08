@@ -42,13 +42,7 @@ namespace WotrModDragonSubdomain
                 .AddLearnSpellList(
                     characterClass: CharacterClassRefs.ClericClass.ToString(),
                     archetype: ArchetypeRefs.EcclesitheurgeArchetype.ToString(),
-                    spellList: DragonSubdomainSpellList.SpellListName)
-                //.AddPrerequisiteNoFeature(
-                //    feature: DragonSubdomainProgressionSecondary.ProgressionName,
-                //    group: Prerequisite.GroupType.All,
-                //    checkInProgression: false,
-                //    hideInUI: true,
-                //    isFeatureSelectionWhiteList: true)
+                    spellList: DragonSubdomainSpellList.SpellListName)                
                 .AddLearnSpellList(
                     archetype: ArchetypeRefs.DivineHunterArchetype_0.ToString(),
                     characterClass: CharacterClassRefs.HunterClass.ToString(),
@@ -89,23 +83,18 @@ namespace WotrModDragonSubdomain
             var addDragonSubdomainToDomainsFeatureSelection = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.DomainsSelection)
                 .AddToAllFeatures(dragonSubdomainProgression)
-                .SetDisplayName("DragonSubdomain.Progression.Name")
-                .SetDescription("DragonSubdomain.Progression.Description")
                 .Configure();
 
             var addDragonSubdomainToDivineHunterDomainsFeatureSelection = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.DivineHunterDomainsSelection)
                 .AddToAllFeatures(dragonSubdomainProgression)
-                .SetDisplayName("DragonSubdomain.Progression.Name")
-                .SetDescription("DragonSubdomain.Progression.Description")
                 .Configure();
 
-            var addDragonSubdomainToSecondDomainsSeparatistFeatureSelection = FeatureSelectionConfigurator
-                .For(FeatureSelectionRefs.SecondDomainsSeparatistSelection)
-                .AddToAllFeatures(dragonSubdomainProgression)
-                .SetDisplayName("DragonSubdomain.Progression.Name")
-                .SetDescription("DragonSubdomain.Progression.Description")
-                .Configure();
+            // A separate subdomain progression specific to the Separatist archetype is needed, cannot reuse the main one
+            //var addDragonSubdomainToSecondDomainsSeparatistFeatureSelection = FeatureSelectionConfigurator
+            //    .For(FeatureSelectionRefs.SecondDomainsSeparatistSelection)
+            //    .AddToAllFeatures(dragonSubdomainProgression)
+            //    .Configure(); 
 
             //var dragonSubdomainAllowed = FeatureConfigurator
             //    .New("DragonSubdomainAllowed", "F2A1B3C4-D5E6-7890-1234-56789ABCDEF0")
