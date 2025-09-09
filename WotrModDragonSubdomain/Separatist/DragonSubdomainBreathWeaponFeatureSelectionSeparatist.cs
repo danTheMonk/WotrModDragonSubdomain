@@ -15,8 +15,8 @@ namespace WotrModDragonSubdomain.Separatist
         {
             _ = FeatureSelectionConfigurator
                 .New(FeatureSelectionName, FeatureSelectionGuid)
-                .SetDisplayName("DragonSubdomain.BreathWeapon.FeatureSelection.Name")
-                .SetDescription("DragonSubdomain.BreathWeapon.FeatureSelection.Description")
+                .SetDisplayName("DragonSubdomain.BreathWeapon.Separatist.FeatureSelection.Name")
+                .SetDescription("DragonSubdomain.BreathWeapon.Separatist.FeatureSelection.Description")
                 .SetIcon(Constants.dragonBreathFeatureReference.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .SetAllFeatures([
                     AcidDragonBreathFeatureSeparatist.FeatureName,

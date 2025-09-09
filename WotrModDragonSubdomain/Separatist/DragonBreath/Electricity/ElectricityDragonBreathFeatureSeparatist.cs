@@ -15,8 +15,8 @@ namespace WotrModDragonSubdomain.Separatist.DragonBreath.Electricity
 
             _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
-                .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
-                .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")
+                .SetDisplayName("DragonSubdomain.DomainProgression.Separatist.Feature.Name")
+                .SetDescription("DragonSubdomain.DomainProgression.Separatist.Feature.Description")
                 .SetIcon(dragonBreathAbility.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .AddFacts([ElectricityDragonBreathAbilitySeparatist.AbilityName]) // Put breath weapon ability here
                 .AddAbilityResources(resource: ElectricityDragonBreathResourceSeparatist.ResourceName, restoreAmount: true)

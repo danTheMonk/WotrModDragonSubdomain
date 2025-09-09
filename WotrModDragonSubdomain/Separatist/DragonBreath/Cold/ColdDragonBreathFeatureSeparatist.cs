@@ -15,8 +15,8 @@ namespace WotrModDragonSubdomain.Separatist.DragonBreath.Cold
 
             _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
-                .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
-                .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")
+                .SetDisplayName("DragonSubdomain.DomainProgression.Separatist.Feature.Name")
+                .SetDescription("DragonSubdomain.DomainProgression.Separatist.Feature.Description")
                 .SetIcon(dragonBreathAbility.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .AddFacts([ColdDragonBreathAbilitySeparatist.AbilityName]) // Put breath weapon ability here
                 .AddAbilityResources(resource: ColdDragonBreathResourceSeparatist.ResourceName, restoreAmount: true)
