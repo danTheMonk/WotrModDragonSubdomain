@@ -1,6 +1,6 @@
 # WotrModDragonSubdomain
 
-A mod for Pathfinder: Wrath of the Righteous that adds a custom Dragon Subdomain, including new breath weapon abilities and spell lists, with full support for the Separatist archetype.
+A mod for Pathfinder: Wrath of the Righteous that adds a custom Dragon Subdomain based on [this](https://www.d20pfsrd.com/classes/core-classes/cleric/domains/paizo-domains/scalykind-domain/dragon-subdomain/), including new breath weapon abilities and spell lists, with full support for the Separatist archetype.
 
 ## Features
 
