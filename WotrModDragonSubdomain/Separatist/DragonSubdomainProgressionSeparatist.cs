@@ -16,8 +16,8 @@ namespace WotrModDragonSubdomain.Separatist
         {
             var dragonSubdomainProgressionSeparatist = ProgressionConfigurator
                 .New(ProgressionName, ProgressionGuid)
-                .SetDisplayName("DragonSubdomain.Progression.Name")
-                .SetDescription("DragonSubdomain.Progression.Description")
+                .SetDisplayName("DragonSubdomain.Separatist.Progression.Name")
+                .SetDescription("DragonSubdomain.Separatist.Progression.Description")
                 .AddPrerequisiteFeature(
                     feature: FeatureRefs.ScalykindDomainAllowedSeparatist.ToString(),
                     isFeatureSelectionWhiteList: false,
@@ -90,7 +90,7 @@ namespace WotrModDragonSubdomain.Separatist
                 .SetFeaturesRankIncrease([FeatureRefs.TricksterLoreReligionScalykindDomainRankFeature.ToString()])
                 .Configure();
 
-            var addDragonSubdomainToSecondDomainsSeparatistFeatureSelection = FeatureSelectionConfigurator
+            _ = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.SecondDomainsSeparatistSelection)
                 .AddToAllFeatures(dragonSubdomainProgressionSeparatist)
                 .Configure();

@@ -13,10 +13,10 @@ namespace WotrModDragonSubdomain.Separatist.DragonBreath.Acid
         {
             var dragonBreathAbility = AbilityRefs.FormOfTheDragonIBlackBreathWeaponAbility.Reference; // Reference to dragon breath ability, adjust as needed
 
-            var acidDragonBreathFeatureSeparatist = FeatureConfigurator
+            _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
-                .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
-                .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")
+                .SetDisplayName("DragonSubdomain.DomainProgression.Separatist.Feature.Name")
+                .SetDescription("DragonSubdomain.DomainProgression.Separatist.Feature.Description")
                 .SetIcon(dragonBreathAbility.Get().m_Icon) // Use the same icon as the dragon breath feature
                 .AddFacts([AcidDragonBreathAbilitySeparatist.AbilityName]) // Put breath weapon ability here
                 .AddAbilityResources(resource: AcidDragonBreathResourceSeparatist.ResourceName, restoreAmount: true)

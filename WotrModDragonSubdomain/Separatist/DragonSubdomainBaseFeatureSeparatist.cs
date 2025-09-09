@@ -10,7 +10,7 @@ namespace WotrModDragonSubdomain.Separatist
 
         public static void Configure()
         {
-            var dragonSubdomainBaseFeatureSeparatist = FeatureConfigurator
+            _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
                 .CopyFrom(FeatureRefs.ScalykindDomainBaseFeatureSeparatist.Reference)
                 .AddFeatureOnClassLevel(

@@ -1,12 +1,12 @@
 ﻿{
   "Id": "WotrModDragonSubdomain",
   "DisplayName": "Dragon Subdomain",
-  "Author": "",
-  "Version": "1.0.0",
+  "Author": "DanTheMonk",
+  "Version": "1.0.1",
   "ManagerVersion": "0.27.11",
   "Requirements": [],
   "AssemblyName": "WotrModDragonSubdomain.dll",
   "EntryMethod": "WotrModDragonSubdomain.Main.Load",
-  "HomePage": "",
-  "Repository": ""
+  "HomePage": "https://github.com/danTheMonk/WotrModDragonSubdomain",
+  "Repository": "https://github.com/danTheMonk/WotrModDragonSubdomain"
 }

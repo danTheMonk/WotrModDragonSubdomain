@@ -10,7 +10,7 @@ namespace WotrModDragonSubdomain.DragonBreath.Acid
 
         public static void Configure()
         {
-            var acidDragonBreathResource = AbilityResourceConfigurator
+            _ = AbilityResourceConfigurator
                 .New(ResourceName, ResourceGuid) // Unique GUID
                 .SetMaxAmount(ResourceAmountBuilder
                     .New(1)

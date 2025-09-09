@@ -13,7 +13,7 @@ namespace WotrModDragonSubdomain.DragonBreath.Acid
         {
             var dragonBreathAbility = AbilityRefs.FormOfTheDragonIBlackBreathWeaponAbility.Reference; // Reference to dragon breath ability, adjust as needed
 
-            var acidDragonBreathFeature = FeatureConfigurator
+            _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
                 .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
                 .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")

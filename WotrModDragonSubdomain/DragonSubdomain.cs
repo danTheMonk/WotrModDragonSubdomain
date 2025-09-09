@@ -9,18 +9,11 @@ namespace WotrModDragonSubdomain
 {
     public class DragonSubdomain
     {
-        public static readonly string DomainName = "DragonSubdomain";
-        public static readonly string DomainGuid = "5ce8b851-8878-46a8-b951-910e29fc532d";
-
         public static readonly string ProgressionName = "DragonSubdomainProgression";
         public static readonly string ProgressionGuid = "09babed0-cf38-4eae-b09a-0e630edbe546";
 
         public static void Configure()
         {
-            // Reference the Scalykind domain progression blueprint
-            var apsuFeature = FeatureRefs.ApsuFeature.Reference; // Reference to a deity feature, adjust as needed
-            var dahakFeature = FeatureRefs.DahakFeature.Reference; // Reference to another deity feature, adjust as needed
-
             // Create a new progression for the Dragon subdomain
             var dragonSubdomainProgression = ProgressionConfigurator
                 .New(ProgressionName, ProgressionGuid)
@@ -42,7 +35,7 @@ namespace WotrModDragonSubdomain
                 .AddLearnSpellList(
                     characterClass: CharacterClassRefs.ClericClass.ToString(),
                     archetype: ArchetypeRefs.EcclesitheurgeArchetype.ToString(),
-                    spellList: DragonSubdomainSpellList.SpellListName)                
+                    spellList: DragonSubdomainSpellList.SpellListName)
                 .AddLearnSpellList(
                     archetype: ArchetypeRefs.DivineHunterArchetype_0.ToString(),
                     characterClass: CharacterClassRefs.HunterClass.ToString(),
@@ -80,41 +73,15 @@ namespace WotrModDragonSubdomain
                 .SetFeaturesRankIncrease([FeatureRefs.TricksterLoreReligionScalykindDomainRankFeature.ToString()])
                 .Configure();
 
-            var addDragonSubdomainToDomainsFeatureSelection = FeatureSelectionConfigurator
+            _ = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.DomainsSelection)
                 .AddToAllFeatures(dragonSubdomainProgression)
                 .Configure();
 
-            var addDragonSubdomainToDivineHunterDomainsFeatureSelection = FeatureSelectionConfigurator
+            _ = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.DivineHunterDomainsSelection)
                 .AddToAllFeatures(dragonSubdomainProgression)
                 .Configure();
-
-            // A separate subdomain progression specific to the Separatist archetype is needed, cannot reuse the main one
-            //var addDragonSubdomainToSecondDomainsSeparatistFeatureSelection = FeatureSelectionConfigurator
-            //    .For(FeatureSelectionRefs.SecondDomainsSeparatistSelection)
-            //    .AddToAllFeatures(dragonSubdomainProgression)
-            //    .Configure(); 
-
-            //var dragonSubdomainAllowed = FeatureConfigurator
-            //    .New("DragonSubdomainAllowed", "F2A1B3C4-D5E6-7890-1234-56789ABCDEF0")
-            //    .AddSpecialSpellListForArchetype(
-            //        archetype: ArchetypeRefs.EcclesitheurgeArchetype.ToString(),
-            //        characterClass: CharacterClassRefs.ClericClass.ToString(),
-            //        spellList: DragonSubdomainSpellList.SpellListName)
-            //    .SetAllowNonContextActions(false)
-            //    .SetHideInUI(true)
-            //    .SetHideInCharacterSheetAndLevelUp(false)
-            //    .SetHideNotAvailibleInUI(false)
-            //    .SetRanks(1)
-            //    .SetReapplyOnLevelUp(false)
-            //    .SetIsClassFeature(true)
-            //    .SetIsPrerequisiteFor([
-            //        FeatureRefs.ScalykindBlessingFeature.ToString(),
-            //        dragonSubdomainProgression,
-            //        DragonSubdomainProgressionSecondary.ProgressionName
-            //    ])
-            //    .Configure();
         }
     }
 }

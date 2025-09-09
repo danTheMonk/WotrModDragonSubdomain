@@ -10,7 +10,7 @@ namespace WotrModDragonSubdomain.Separatist.DragonBreath.Fire
 
         public static void Configure()
         {
-            var fireDragonBreathResourceSeparatist = AbilityResourceConfigurator
+            _ = AbilityResourceConfigurator
                 .New(ResourceName, ResourceGuid) // Unique GUID
                 .SetMaxAmount(ResourceAmountBuilder
                     .New(1)

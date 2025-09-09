@@ -10,7 +10,7 @@ namespace WotrModDragonSubdomain.Separatist.DragonBreath.Cold
 
         public static void Configure()
         {
-            var coldDragonBreathResourceSeparatist = AbilityResourceConfigurator
+            _ = AbilityResourceConfigurator
                 .New(ResourceName, ResourceGuid)
                 .SetMaxAmount(ResourceAmountBuilder
                     .New(1)
