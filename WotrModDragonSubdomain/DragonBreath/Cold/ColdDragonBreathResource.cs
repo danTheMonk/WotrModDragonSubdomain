@@ -10,7 +10,7 @@ namespace WotrModDragonSubdomain.DragonBreath.Cold
 
         public static void Configure()
         {
-            var coldDragonBreathResource = AbilityResourceConfigurator
+            _ = AbilityResourceConfigurator
                 .New(ResourceName, ResourceGuid) // Unique GUID
                 .SetMaxAmount(ResourceAmountBuilder
                     .New(1)

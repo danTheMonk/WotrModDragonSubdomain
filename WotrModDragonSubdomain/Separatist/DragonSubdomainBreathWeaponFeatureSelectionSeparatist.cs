@@ -13,7 +13,7 @@ namespace WotrModDragonSubdomain.Separatist
 
         public static void Configure()
         {
-            var dragonSubdomainBreathWeaponFeatureSelectionSeparatist = FeatureSelectionConfigurator
+            _ = FeatureSelectionConfigurator
                 .New(FeatureSelectionName, FeatureSelectionGuid)
                 .SetDisplayName("DragonSubdomain.BreathWeapon.FeatureSelection.Name")
                 .SetDescription("DragonSubdomain.BreathWeapon.FeatureSelection.Description")

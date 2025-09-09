@@ -27,13 +27,13 @@ namespace WotrModDragonSubdomain.DragonBreath.Cold
                 .New()
                 .SavingThrow(
                     SavingThrowType.Reflex,
-                    onResult: ActionsBuilder.New() // TODO: Add Custom DC if needed
+                    onResult: ActionsBuilder.New()
                         .DealDamage(
                             DamageTypes.Energy(DamageEnergyType.Cold),
                             ContextDice.Value(DiceType.D6, ContextValues.Rank()),
                             halfIfSaved: true));
 
-            var coldDragonBreathAbility = AbilityConfigurator
+            _ = AbilityConfigurator
                 .New(AbilityName, AbilityGuid) // Unique GUID
                 .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
                 .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")

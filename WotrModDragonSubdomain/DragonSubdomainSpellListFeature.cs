@@ -10,7 +10,7 @@ namespace WotrModDragonSubdomain
 
         public static void Configure()
         {
-            var dragonSubdomainSpellListFeature = FeatureConfigurator
+            _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid, [])
                 .AddSpecialSpellList(characterClass: CharacterClassRefs.ClericClass.ToString(), spellList: DragonSubdomainSpellList.SpellListName)
                 .SetHideInUI(true)

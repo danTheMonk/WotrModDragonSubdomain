@@ -9,13 +9,13 @@ namespace WotrModDragonSubdomain
         public const string SpellListName = "DragonSubdomainSpellList";
         public const string SpellListGuid = "B7C9D8E1-F2A3-4567-89AB-CDEF01234567";
 
-        public static BlueprintSpellList Configure()
+        public static void Configure()
         {
             SpellLevelList singleSpellToAddForLvl0 = new(0);
 
             SpellLevelList singleSpellToAddForLvl1 = new(1);
             singleSpellToAddForLvl1.Spells.Add(AbilityRefs.MagicFang.Reference);
-            
+
             SpellLevelList singleSpellToAddForLvl2 = new(2);
             singleSpellToAddForLvl2.Spells.Add(AbilityRefs.HoldAnimal.Reference);
 
@@ -54,7 +54,7 @@ namespace WotrModDragonSubdomain
                 singleSpellToAddForLvl9
             ];
 
-            return SpellListConfigurator
+            _ = SpellListConfigurator
                 .New(SpellListName, SpellListGuid)
                 .AddToSpellsByLevel(spellsToAdd)
                 .SetIsMythic(false)

@@ -10,7 +10,7 @@ namespace WotrModDragonSubdomain
 
         public static void Configure()
         {
-            var dragonSubdomainBaseFeature = FeatureConfigurator
+            _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
                 .CopyFrom(FeatureRefs.ScalykindDomainBaseFeature.Reference)
                 .AddFeatureOnClassLevel(

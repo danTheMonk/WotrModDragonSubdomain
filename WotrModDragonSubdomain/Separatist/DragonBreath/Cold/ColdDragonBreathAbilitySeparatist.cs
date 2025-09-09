@@ -39,7 +39,7 @@ namespace WotrModDragonSubdomain.Separatist.DragonBreath.Cold
                             ContextDice.Value(DiceType.D6, ContextValues.Rank()),
                             halfIfSaved: true));
 
-            var coldDragonBreathAbility = AbilityConfigurator
+            _ = AbilityConfigurator
                 .New(AbilityName, AbilityGuid) // Unique GUID
                 .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
                 .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")

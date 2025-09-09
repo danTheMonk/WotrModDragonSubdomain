@@ -13,7 +13,7 @@ namespace WotrModDragonSubdomain.Separatist.DragonBreath.Electricity
         {
             var dragonBreathAbility = AbilityRefs.FormOfTheDragonIBlueBreathWeaponAbility.Reference; // Reference to dragon breath ability, adjust as needed
 
-            var electricityDragonBreathFeature = FeatureConfigurator
+            _ = FeatureConfigurator
                 .New(FeatureName, FeatureGuid)
                 .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
                 .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")

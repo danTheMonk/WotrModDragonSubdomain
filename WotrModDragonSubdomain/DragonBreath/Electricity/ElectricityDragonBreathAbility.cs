@@ -27,13 +27,13 @@ namespace WotrModDragonSubdomain.DragonBreath.Electricity
                 .New()
                 .SavingThrow(
                     SavingThrowType.Reflex,
-                    onResult: ActionsBuilder.New() // TODO: Add Custom DC if needed
+                    onResult: ActionsBuilder.New()
                         .DealDamage(
                             DamageTypes.Energy(DamageEnergyType.Electricity),
                             ContextDice.Value(DiceType.D6, ContextValues.Rank()),
                             halfIfSaved: true));
 
-            var electricityDragonBreathAbility = AbilityConfigurator
+            _ = AbilityConfigurator
                 .New(AbilityName, AbilityGuid) // Unique GUID
                 .SetDisplayName("DragonSubdomain.DomainProgression.Feature.Name")
                 .SetDescription("DragonSubdomain.DomainProgression.Feature.Description")
@@ -46,7 +46,7 @@ namespace WotrModDragonSubdomain.DragonBreath.Electricity
                 .SetIsDomainAbility(true)
                 .AllowTargeting(enemies: true, point: true)
                 .SetShouldTurnToTarget(true)
-                .AddAbilityDeliverProjectile(type: AbilityProjectileType.Cone, projectiles: [ProjectileRefs.SonicCone15Feet00.ToString()], length: 15.Feet()) // TODO: Is there an eletricity cone projectile?
+                .AddAbilityDeliverProjectile(type: AbilityProjectileType.Cone, projectiles: [ProjectileRefs.SonicCone15Feet00.ToString()], length: 15.Feet()) // Owlcat uses Sonic for electricity cone effects (e.g. Air Bloodline Sorcerer), so I will too.
                 .AddContextRankConfig(ContextRankConfigs.ClassLevel([CharacterClassRefs.ClericClass.ToString()]).WithCustomProgression((3, 0), (5, 3), (7, 4), (9, 5), (11, 6), (13, 7), (15, 8), (17, 9), (19, 10), (20, 11))) // ([Round down (Lvl / 2)] + 1)d6
                 .AddAbilityResourceLogic(amount: 1, isSpendResource: true, requiredResource: ElectricityDragonBreathResource.ResourceName)
                 .AddAbilityEffectRunAction(electricityDragonBreathAttack)

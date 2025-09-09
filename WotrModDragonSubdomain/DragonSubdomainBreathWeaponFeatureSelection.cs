@@ -13,7 +13,7 @@ namespace WotrModDragonSubdomain
 
         public static void Configure()
         {
-            var dragonSubdomainBreathWeaponFeatureSelection = FeatureSelectionConfigurator
+            _ = FeatureSelectionConfigurator
                 .New(FeatureSelectionName, FeatureSelectionGuid)
                 .SetDisplayName("DragonSubdomain.BreathWeapon.FeatureSelection.Name")
                 .SetDescription("DragonSubdomain.BreathWeapon.FeatureSelection.Description")

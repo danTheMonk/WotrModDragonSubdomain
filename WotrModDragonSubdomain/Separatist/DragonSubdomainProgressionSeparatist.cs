@@ -90,7 +90,7 @@ namespace WotrModDragonSubdomain.Separatist
                 .SetFeaturesRankIncrease([FeatureRefs.TricksterLoreReligionScalykindDomainRankFeature.ToString()])
                 .Configure();
 
-            var addDragonSubdomainToSecondDomainsSeparatistFeatureSelection = FeatureSelectionConfigurator
+            _ = FeatureSelectionConfigurator
                 .For(FeatureSelectionRefs.SecondDomainsSeparatistSelection)
                 .AddToAllFeatures(dragonSubdomainProgressionSeparatist)
                 .Configure();
